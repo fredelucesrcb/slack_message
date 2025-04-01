@@ -1,7 +1,7 @@
 
 import { NextResponse } from "next/server";
 
-export async function sendMessageToSlack(payload: { message: string, slackUrl: string }) {
+export async function sendMessageToSlack(payload: { message: string, slackUrl: string }): Promise<NextResponse>{
 
     const { message, slackUrl  } = payload;
     
@@ -15,14 +15,18 @@ export async function sendMessageToSlack(payload: { message: string, slackUrl: s
         body: JSON.stringify(pay)
       })
 
+    //   console.log(res.status)
+
       if(res.status === 200){
+        console.log('here 200')
         return NextResponse.json({"message": "success", status:200}, {status: 200})
       } else {
+        console.log('here 404')
         return NextResponse.json({"message": "something went wrong", status:500}, {status: 500});
       }
     } catch (error) {
         console.error('Error sending message to Slack:', error);
-      return false;
+        return NextResponse.json({"message": "something went wrong", status:500}, {status: 500});
     }
 
   }
