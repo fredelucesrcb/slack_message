@@ -92,7 +92,7 @@ const Forms = () => {
                 name="message"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel>Username</FormLabel>
+                    <FormLabel>Message</FormLabel>
                     <FormControl>
                         <Input {...field} />
                     </FormControl>
@@ -167,21 +167,6 @@ const Forms = () => {
                 </Button>
             </form>
         </Form>
-        
-        
-        
-        {/*  
-        <form className="w-full max-w-sm" onSubmit={sendMessage}>
-            <div className="flex items-center border-b border-teal-500 py-2">
-            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" name="message" type="text" placeholder="Message" aria-label="Full name" />
-            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="number" name="minutes" placeholder="Minutes" aria-label="Full name" />
-            <button className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">
-                Send Message
-            </button>
-            </div>
-        </form>
-
-        */}
     
     </>
   )
