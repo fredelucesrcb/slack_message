@@ -80,7 +80,9 @@ const Forms = () => {
         toast.success(`We will attempt to send your message in ${numVal} ${selectedOption}(s)`);
     }
 
-    const buttonText = `in ${numVal != 0 ? numVal : ''} ${selectedOption != '' ? selectedOption+"(s)" : ''}`
+    // const buttonText = `in ${numVal != 0 ? numVal : ''} ${selectedOption != '' ? selectedOption+"(s)" : ''}`
+    const buttonText = `in ${numVal} ${selectedOption}`
+
 
   return (
     <>
@@ -163,7 +165,7 @@ const Forms = () => {
                 )}
                 />
                 <Button type="submit">
-                    Send { numVal != 0 && selectedOption != '' ? buttonText : ''}
+                    Send { (numVal > 0 && !isNaN(numVal) ) && selectedOption != '' ? buttonText+`(s)` : ''}
                 </Button>
             </form>
         </Form>
