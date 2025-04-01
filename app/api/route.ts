@@ -11,7 +11,7 @@ export async function POST(request: Request) {
 
     const res = await sendMessageToSlack(req);
 
-    if (res.status === 200){
+    if (res){
         return NextResponse.json({"message": "success"},{status: 200});
     } else {
         return NextResponse.json({"error": "Internal Server Error"}, {status: 404});
