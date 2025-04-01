@@ -6,7 +6,7 @@ export async function sendMessageToSlack(payload: { message: string, slackUrl: s
     const { message, slackUrl  } = payload;
     
     const pay = {
-        "text": `From Roy's Slack Bot: ${message}`
+        "text": `From Roy Caesar Fredeluces' Slack Bot: ${message}`
     }
 
     try {
@@ -14,8 +14,6 @@ export async function sendMessageToSlack(payload: { message: string, slackUrl: s
         method: "POST",
         body: JSON.stringify(pay)
       })
-
-    //   console.log(res.status)
 
       if(res.status === 200){
         console.log('here 200')
