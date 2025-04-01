@@ -76,6 +76,8 @@ const Forms = () => {
                console.error(error)
             }
         }, convertToSeconds(number,unit));
+
+        toast.success(`Message will be received in ${numVal} ${selectedOption}`);
     }
 
     const buttonText = `in ${numVal != 0 ? numVal : ''} ${selectedOption != '' ? selectedOption+"(s)" : ''}`
