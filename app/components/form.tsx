@@ -70,7 +70,7 @@ const Forms = () => {
                 if (res.ok) {
                     toast.success('Message has been sent');
                 } else {
-                    toast.warn('failed');
+                    toast.warn('failed to send message.');
                 }
             } catch (error) {
                console.error(error)
