@@ -57,7 +57,7 @@ const Forms = () => {
 
         setTimeout(async () =>  {
             try {
-                const res = await fetch("https://slack-message-mu.vercel.app//api", {
+                const res = await fetch("https://slack-message-mu.vercel.app/api", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
