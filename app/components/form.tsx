@@ -31,7 +31,7 @@ const UnitEnum = z.enum(["second", "minute", "hour"])
 type UnitEnum = z.infer<typeof UnitEnum>
 
 const formSchema = z.object({
-    message: z.string().min(1).max(50),
+    message: z.string().min(1).max(200),
     number: z.coerce.number().gt(0, 'must be greater than 0'),
     slackUrl: z.string().min(1),
     unit: UnitEnum
